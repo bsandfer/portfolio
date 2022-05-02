@@ -10,7 +10,7 @@ const Contact = () => {
       </Grid>
     </Grid>
     <Grid container justifyContent="center">
-        <Grid item xs={12} md={8} lg={7}>
+        <Grid item xs={11} md={9} lg={8}>
         <FormControl fullWidth>
           <InputLabel variant="outlined" htmlFor="my-input">Email address</InputLabel>
           <Input id="my-input" aria-describedby="my-helper-text" />
