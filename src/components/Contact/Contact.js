@@ -1,5 +1,5 @@
 import React from 'react'
-import { FormControl, FormHelperText, Grid, Input, InputLabel, OutlinedInput, TextField } from '@mui/material'
+import { Button, FormControl, FormHelperText, Grid, Input, InputLabel, OutlinedInput, TextField } from '@mui/material'
 
 const Contact = () => {
   return (
@@ -50,6 +50,12 @@ const Contact = () => {
           autoComplete="off"
         />
         </FormControl>
+        </Grid>
+
+        <Grid container justifyContent="center" spacing={3} padding={3}>
+          <Grid item xs={11} md={9} lg={8}>
+            <Button variant="contained">Send</Button>
+          </Grid>
         </Grid>
 
     </Grid>
