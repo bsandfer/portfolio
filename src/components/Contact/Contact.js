@@ -11,7 +11,7 @@ const Contact = () => {
       </Grid>
     </Grid>
 
-    <Grid container justifyContent="center" spacing={3}>
+    <Grid container justifyContent="center" spacing={3} padding={3}>
 
         <Grid item xs={11} md={9} lg={8}>
         <FormControl fullWidth>
