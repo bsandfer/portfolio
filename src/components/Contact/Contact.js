@@ -1,23 +1,59 @@
 import React from 'react'
-import { FormControl, FormHelperText, Grid, Input, InputLabel } from '@mui/material'
+import { FormControl, FormHelperText, Grid, Input, InputLabel, OutlinedInput, TextField } from '@mui/material'
 
 const Contact = () => {
   return (
     <>
+
     <Grid container justifyContent="center">
       <Grid item>
         <h1>Contact</h1>
       </Grid>
     </Grid>
-    <Grid container justifyContent="center">
+
+    <Grid container justifyContent="center" spacing={3}>
+
         <Grid item xs={11} md={9} lg={8}>
         <FormControl fullWidth>
-          <InputLabel variant="outlined" htmlFor="my-input">Email address</InputLabel>
-          <Input id="my-input" aria-describedby="my-helper-text" />
-          <FormHelperText id="my-helper-text">your secrets are safe with me. || send me an email.</FormHelperText>
+        <TextField
+          required
+          id="outlined-input"
+          label="Name"
+          type="text"
+          autoComplete="name"
+        />
         </FormControl>
         </Grid>
+
+        <Grid item xs={11} md={9} lg={8}>
+        <FormControl fullWidth>
+        <TextField
+          required
+          id="outlined-input"
+          label="Email address"
+          type="email"
+          autoComplete="email"
+          helperText="i won't share your info!"
+        />
+        </FormControl>
+        </Grid>
+
+        <Grid item xs={11} md={9} lg={8}>
+        <FormControl fullWidth>
+        <TextField
+          required
+          id="outlined-input"
+          label="Your message:"
+          type="text"
+          multiline
+          rows={3}
+          autoComplete="off"
+        />
+        </FormControl>
+        </Grid>
+
     </Grid>
+
     </>
   )
 }
