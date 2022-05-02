@@ -44,7 +44,7 @@ const ResponsiveAppBar = () => {
             component="div"
             sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
           >
-            LOGO
+            Brendan Sandfer
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -76,11 +76,20 @@ const ResponsiveAppBar = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+              
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">About</Typography>
                 </MenuItem>
-              ))}
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">Portfolio</Typography>
+                </MenuItem>
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">Contact</Typography>
+                </MenuItem>
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">Resume</Typography>
+                </MenuItem>
+              
             </Menu>
           </Box>
           <Typography
@@ -89,18 +98,35 @@ const ResponsiveAppBar = () => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
           >
-            LOGO
+            Brendan Sandfer
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
+            
               <Button
-                key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                {page}
+                About
               </Button>
-            ))}
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: 'white', display: 'block' }}
+              >
+                Portfolio
+              </Button>
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: 'white', display: 'block' }}
+              >
+                Contact
+              </Button>
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: 'white', display: 'block' }}
+              >
+                Resume
+              </Button>
+          
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
