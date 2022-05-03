@@ -1,7 +1,19 @@
-import React from 'react'
+import {useState} from 'react'
 import { Button, FormControl, FormHelperText, Grid, Input, InputLabel, OutlinedInput, TextField } from '@mui/material'
 
+
 const Contact = () => {
+
+  const [formState, setFormState] = useState({
+    name: '',
+    email: '',
+    message: ''
+  })
+
+  const handleInputChange = ({ target: { name, value } }) => {
+    setFormState({ ...formState, [name]: value })
+  }
+
   return (
     <>
 
@@ -20,6 +32,8 @@ const Contact = () => {
           id="outlined-input"
           label="Name"
           type="text"
+          name='name'
+          onChange={handleInputChange}
           autoComplete="name"
         />
         </FormControl>
@@ -32,8 +46,10 @@ const Contact = () => {
           id="outlined-input"
           label="Email address"
           type="email"
+          name='email'
+          onChange={handleInputChange}
           autoComplete="email"
-          helperText="i won't share your info!"
+          helperText="i won't share your email!"
         />
         </FormControl>
         </Grid>
@@ -45,6 +61,8 @@ const Contact = () => {
           id="outlined-input"
           label="Your message:"
           type="text"
+          name='message'
+          onChange={handleInputChange}
           multiline
           rows={3}
           autoComplete="off"
