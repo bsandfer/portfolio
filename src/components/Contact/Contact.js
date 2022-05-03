@@ -8,7 +8,8 @@ const Contact = () => {
     name: '',
     email: '',
     message: '',
-    nameNeeded: false
+    nameNeeded: false,
+    messageNeeded:false
   })
 
   const handleInputChange = ({ target: { name, value } }) => {
@@ -17,7 +18,13 @@ const Contact = () => {
 
   const handleNameBlur = () => {
     if(formState.name==='') {
-      setFormState({...formState, nameNeeded: true})
+      setFormState({...formState, nameNeeded: true, messageNeeded: false})
+    }
+  }
+  
+  const handleMessageBlur = () => {
+    if(formState.message==='') {
+      setFormState({...formState, messageNeeded: true, nameNeeded: false})
     }
   }
 
@@ -40,8 +47,8 @@ const Contact = () => {
           label="Name"
           type="text"
           name='name'
-          onChange={handleInputChange}
           autoComplete="name"
+          onChange={handleInputChange}
           onBlur={handleNameBlur}
         />
         </FormControl>
@@ -55,9 +62,9 @@ const Contact = () => {
           label="Email address"
           type="email"
           name='email'
-          onChange={handleInputChange}
           autoComplete="email"
           helperText="i won't share your email!"
+          onChange={handleInputChange}
         />
         </FormControl>
         </Grid>
@@ -70,10 +77,11 @@ const Contact = () => {
           label="Your message:"
           type="text"
           name='message'
-          onChange={handleInputChange}
           multiline
           rows={3}
           autoComplete="off"
+          onChange={handleInputChange}
+          onBlur={handleMessageBlur}
         />
         </FormControl>
         </Grid>
@@ -87,6 +95,9 @@ const Contact = () => {
         <Grid container justifyContent="center" spacing={3} padding={3}>
           {
             formState.nameNeeded? <p>name required!</p> : ''
+          } 
+          {
+            formState.messageNeeded? <p>message required!</p> : ''
           } 
         </Grid>
 
