@@ -9,7 +9,8 @@ const Contact = () => {
     email: '',
     message: '',
     nameNeeded: false,
-    messageNeeded:false
+    messageNeeded: false,
+    invalidEmail: false
   })
 
   const handleInputChange = ({ target: { name, value } }) => {
@@ -18,13 +19,32 @@ const Contact = () => {
 
   const handleNameBlur = () => {
     if(formState.name==='') {
-      setFormState({...formState, nameNeeded: true, messageNeeded: false})
+      setFormState({...formState, nameNeeded: true,invalidEmail:false, messageNeeded: false})
     }
   }
   
   const handleMessageBlur = () => {
     if(formState.message==='') {
-      setFormState({...formState, messageNeeded: true, nameNeeded: false})
+      setFormState({...formState, messageNeeded: true,invalidEmail:false, nameNeeded: false})
+    }
+  }
+
+  const validateEmail = (inputText) => {
+    var mailFormat = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    if(inputText.match(mailFormat))
+        {
+          return true
+        }
+          else {
+            return false
+          }
+  }
+
+  const handleEmailBlur = () => {
+    if(validateEmail(formState.email)){
+      console.log("valid")
+    } else {
+      setFormState({...formState, invalidEmail:true, nameNeeded:false, messageNeeded:false})
     }
   }
 
@@ -65,6 +85,7 @@ const Contact = () => {
           autoComplete="email"
           helperText="i won't share your email!"
           onChange={handleInputChange}
+          onBlur={handleEmailBlur}
         />
         </FormControl>
         </Grid>
@@ -98,6 +119,9 @@ const Contact = () => {
           } 
           {
             formState.messageNeeded? <p>message required!</p> : ''
+          } 
+          {
+            formState.invalidEmail? <p>invalid email!</p> : ''
           } 
         </Grid>
 
