@@ -51,26 +51,28 @@ const Portfolio = () => {
       description: "bleep six",
       image:
         "https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-    }
+    },
   ];
 
   return (
     <>
-
       <Grid container justifyContent="center">
-          <h1>My Portfolio</h1>
+        <h1>My Portfolio</h1>
       </Grid>
 
       <Grid container spacing={4} padding={2} justifyContent="center">
-
-          {projects.map(project =>
-                <Grid item>
-                    <Card title={project.title} github={project.github} heroku={project.heroku} image={project.image} description={project.description}></Card>
-                </Grid>
-            )}
-
+        {projects.map((project) => (
+          <Grid item>
+            <Card
+              title={project.title}
+              github={project.github}
+              heroku={project.heroku}
+              image={project.image}
+              description={project.description}
+            ></Card>
+          </Grid>
+        ))}
       </Grid>
-
     </>
   );
 };

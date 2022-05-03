@@ -7,11 +7,18 @@ const Contact = () => {
   const [formState, setFormState] = useState({
     name: '',
     email: '',
-    message: ''
+    message: '',
+    nameNeeded: false
   })
 
   const handleInputChange = ({ target: { name, value } }) => {
     setFormState({ ...formState, [name]: value })
+  }
+
+  const handleNameBlur = () => {
+    if(formState.name==='') {
+      setFormState({...formState, nameNeeded: true})
+    }
   }
 
   return (
@@ -35,6 +42,7 @@ const Contact = () => {
           name='name'
           onChange={handleInputChange}
           autoComplete="name"
+          onBlur={handleNameBlur}
         />
         </FormControl>
         </Grid>
@@ -74,6 +82,12 @@ const Contact = () => {
           <Grid item xs={11} md={9} lg={8}>
             <Button variant="contained">Send</Button>
           </Grid>
+        </Grid>
+
+        <Grid container justifyContent="center" spacing={3} padding={3}>
+          {
+            formState.nameNeeded? <p>name required!</p> : ''
+          } 
         </Grid>
 
     </Grid>
