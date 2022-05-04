@@ -51,7 +51,7 @@ const Contact = () => {
   return (
     <>
 
-    <Grid container justifyContent="center">
+    <Grid container justifyContent="center">   
       <Grid item>
         <h1>Contact</h1>
       </Grid>
