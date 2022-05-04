@@ -34,7 +34,11 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: 'IBM Plex Sans'
+    fontFamily: 'IBM Plex Sans',
+    fontWeightLight: 400,
+    fontWeightRegular: 500,
+    fontWeightMedium: 600,
+    fontWeightBold: 700,
   }
 })
 

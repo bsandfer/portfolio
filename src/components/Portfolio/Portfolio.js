@@ -1,4 +1,4 @@
-import { Grid } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import React from "react";
 import Card from "../Card";
 import ToysIcon from '@mui/icons-material/Toys';
@@ -64,7 +64,7 @@ const Portfolio = () => {
   return (
     <>
       <Grid container justifyContent="center">
-        <h1>My Portfolio</h1>
+        <Typography variant="h3">My Portfolio</Typography>
       </Grid>
 
       <Grid container spacing={4} padding={2} justifyContent="center">

@@ -53,7 +53,7 @@ const Contact = () => {
 
     <Grid container justifyContent="center">   
       <Grid item>
-        <h1>Contact</h1>
+        <Typography variant='h3'>Contact</Typography>
       </Grid>
     </Grid>
 
