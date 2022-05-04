@@ -36,7 +36,7 @@ const RecipeReviewCard = ({ title, github, heroku, description, image }) => {
     <Card sx={{ maxWidth: 345 }}>
       <CardHeader
         avatar={
-          <Avatar sx={{ bgcolor: '#E3B23C' }} aria-label="recipe">
+          <Avatar aria-label="recipe">
             R
           </Avatar>
         }

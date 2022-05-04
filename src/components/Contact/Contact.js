@@ -1,6 +1,5 @@
 import {useState} from 'react'
 import { Button, FormControl, FormHelperText, Grid, Input, InputLabel, OutlinedInput, TextField } from '@mui/material'
-import { teal } from '@mui/material/colors'
 
 
 const Contact = () => {
@@ -110,7 +109,7 @@ const Contact = () => {
 
         <Grid container justifyContent="center" spacing={3} padding={3}>
           <Grid item xs={11} md={9} lg={8}>
-            <Button sx={{ bgcolor: teal['400'] }} variant="contained">Send</Button>
+            <Button variant="contained">Send</Button>
           </Grid>
         </Grid>
 
