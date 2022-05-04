@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import { Button, FormControl, FormHelperText, Grid, Input, InputLabel, OutlinedInput, TextField } from '@mui/material'
+import { Button, FormControl, FormHelperText, Grid, Input, InputLabel, OutlinedInput, TextField, Typography } from '@mui/material'
 
 
 const Contact = () => {
@@ -115,13 +115,13 @@ const Contact = () => {
 
         <Grid container justifyContent="center" spacing={3} padding={3}>
           {
-            formState.nameNeeded? <p>name required!</p> : ''
+            formState.nameNeeded? <Typography color='error'>name required!</Typography> : ''
           } 
           {
-            formState.messageNeeded? <p>message required!</p> : ''
+            formState.messageNeeded? <Typography color='error'>message required!</Typography> : ''
           } 
           {
-            formState.invalidEmail? <p>invalid email!</p> : ''
+            formState.invalidEmail? <Typography color='error'>invalid email!</Typography> : ''
           } 
         </Grid>
 
