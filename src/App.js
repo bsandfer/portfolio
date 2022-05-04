@@ -20,6 +20,12 @@ const theme = createTheme({
       default: '#EDEBD7',
       paper: '#fafafa',
     },
+    textPrimary: {
+      default: 'black',
+    },
+    textSecondary: {
+      default: 'white',
+    },
     error: {
       main: '#c3474c',
     },
@@ -43,7 +49,10 @@ function App() {
         <Footer/>
       </ThemeProvider>
     </>
+
+    
   );
 }
+
 
 export default App;

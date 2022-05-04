@@ -6,6 +6,7 @@ const Portfolio = () => {
   let projects = [
     {
       title: "example1",
+      letter: "A",
       github: "https://github.com/",
       heroku: "https://dashboard.heroku.com/",
       description: "bleep one",
@@ -14,6 +15,7 @@ const Portfolio = () => {
     },
     {
       title: "example2",
+      letter: "B",
       github: "https://github.com/",
       heroku: "https://dashboard.heroku.com/",
       description: "bleep two",
@@ -22,6 +24,7 @@ const Portfolio = () => {
     },
     {
       title: "example3",
+      letter: "C",
       github: "https://github.com/",
       heroku: "https://dashboard.heroku.com/",
       description: "bleep three",
@@ -30,6 +33,7 @@ const Portfolio = () => {
     },
     {
       title: "example4",
+      letter: "D",
       github: "https://github.com/",
       heroku: "https://dashboard.heroku.com/",
       description: "bleep four",
@@ -38,6 +42,7 @@ const Portfolio = () => {
     },
     {
       title: "example5",
+      letter: "E",
       github: "https://github.com/",
       heroku: "https://dashboard.heroku.com/",
       description: "bleep five",
@@ -46,6 +51,7 @@ const Portfolio = () => {
     },
     {
       title: "example6",
+      letter: "F",
       github: "https://github.com/",
       heroku: "https://dashboard.heroku.com/",
       description: "bleep six",
@@ -65,6 +71,7 @@ const Portfolio = () => {
           <Grid item>
             <Card
               title={project.title}
+              letter={project.letter}
               github={project.github}
               heroku={project.heroku}
               image={project.image}

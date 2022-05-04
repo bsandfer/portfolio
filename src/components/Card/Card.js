@@ -10,7 +10,6 @@ import Avatar from "@mui/material/Avatar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
 
@@ -25,7 +24,7 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
-const RecipeReviewCard = ({ title, github, heroku, description, image }) => {
+const RecipeReviewCard = ({ title, letter,  github, heroku, description, image }) => {
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
@@ -34,50 +33,44 @@ const RecipeReviewCard = ({ title, github, heroku, description, image }) => {
 
   return (
     <Card sx={{ maxWidth: 345 }}>
-      <CardHeader
-        avatar={
-          <Avatar aria-label="recipe">
-            R
-          </Avatar>
-        }
-        action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
-        }
-        title={title}
-        subheader="September 14, 2016"
-      />
-      <CardMedia component="img" height="194" image={image} alt="Paella dish" />
-      <CardContent>
-        <Typography paragraph>{description}</Typography>
-      </CardContent>
-      <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-          <a href={github} target="_blank" rel="noreferrer">
-            <GitHubIcon />
-          </a>
-        </IconButton>
-        <IconButton aria-label="share">
-          <a href={heroku} target="_blank" rel="noreferrer">
-            <RocketLaunchIcon />
-          </a>
-        </IconButton>
-        <ExpandMore
-          expand={expanded}
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="show more"
-        >
-          <ExpandMoreIcon />
-        </ExpandMore>
-      </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
-          <Typography paragraph></Typography>
-          
-        </CardContent>
-      </Collapse>
+          <CardHeader
+            avatar={
+              <Avatar color='secondary' aria-label="recipe">
+                {letter}
+              </Avatar>
+            }
+            title={title}
+          />
+          <CardMedia component="img" height="194" image={image} alt="Paella dish" />
+          <CardContent>
+            <Typography paragraph>{description}</Typography>
+          </CardContent>
+          <CardActions disableSpacing>
+            <IconButton aria-label="add to favorites">
+              <a href={github} target="_blank" rel="noreferrer">
+                <GitHubIcon color="primary"/>
+              </a>
+            </IconButton>
+            <IconButton aria-label="share">
+              <a href={heroku} target="_blank" rel="noreferrer">
+                <RocketLaunchIcon color="primary"/>
+              </a>
+            </IconButton>
+            <ExpandMore
+              expand={expanded}
+              onClick={handleExpandClick}
+              aria-expanded={expanded}
+              aria-label="show more"
+            >
+              <ExpandMoreIcon />
+            </ExpandMore>
+          </CardActions>
+          <Collapse in={expanded} timeout="auto" unmountOnExit>
+            <CardContent>
+              <Typography paragraph></Typography>
+              
+            </CardContent>
+          </Collapse>
     </Card>
   );
 };
