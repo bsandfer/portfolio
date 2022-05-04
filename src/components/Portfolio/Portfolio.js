@@ -1,12 +1,13 @@
 import { Grid } from "@mui/material";
 import React from "react";
 import Card from "../Card";
+import ToysIcon from '@mui/icons-material/Toys';
 
 const Portfolio = () => {
   let projects = [
     {
       title: "example1",
-      letter: "A",
+      letter: <ToysIcon/>,
       github: "https://github.com/",
       heroku: "https://dashboard.heroku.com/",
       description: "bleep one",
