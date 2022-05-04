@@ -10,7 +10,7 @@ const Footer = () => {
             <Grid item>
                 <IconButton>
                   <a href='https://github.com/bsandfer' target="_blank" rel="noreferrer">
-                    <GitHubIcon color="primary"></GitHubIcon>
+                    <GitHubIcon fontSize='large' color="primary"></GitHubIcon>
                   </a>
                 </IconButton>
             </Grid>
