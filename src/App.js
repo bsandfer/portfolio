@@ -32,6 +32,9 @@ const theme = createTheme({
     info: {
       main: '#ba68c8',
     },
+  },
+  typography: {
+    fontFamily: 'IBM+Plex+Sans'
   }
 })
 
