@@ -12,38 +12,40 @@ const SizedAvatar = styled(Avatar)`
     height: ${theme.spacing(size)}px; 
   `};
 `;
-    
- 
 
 const About = () => {
   return (
     <>
       <Box marginTop={3}>
-          <Grid  sx={{mx: "auto"}}  justifyContent="center" container padding={2} spacing={2}>
-            
-            <Grid item md={3}>
-              <SizedAvatar
-                alt="photo of me"
-                size="300"
-                src={headshot}
-                // sx={{ width: 1, height: 1 }}
-              ></SizedAvatar>
-            </Grid>
-
-            <Grid item md={1}></Grid>
-
-            <Grid item xs={12} md={3}>
-              <Typography variant='h4'>Brendan Sandfer</Typography>
-              <br></br>
-              <Typography paragraph>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                  ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                  aliquip ex ea commodo consequat. 
-              </Typography>
-            </Grid>
-
+        <Grid
+          sx={{ mx: "auto" }}
+          justifyContent="center"
+          container
+          padding={2}
+          spacing={2}
+        >
+          <Grid item md={3}>
+            <SizedAvatar
+              alt="photo of me"
+              size="300"
+              src={headshot}
+              // sx={{ width: 1, height: 1 }}
+            ></SizedAvatar>
           </Grid>
+
+          <Grid item md={1}></Grid>
+
+          <Grid item xs={12} md={3}>
+            <Typography variant="h4">Brendan Sandfer</Typography>
+            <br></br>
+            <Typography paragraph>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </Typography>
+          </Grid>
+        </Grid>
       </Box>
     </>
   );
