@@ -21,7 +21,7 @@ const About = () => {
       <Box marginTop={3}>
           <Grid  sx={{mx: "auto"}}  justifyContent="center" container padding={2} spacing={2}>
             
-            <Grid item md={4}>
+            <Grid item md={3}>
               <SizedAvatar
                 alt="photo of me"
                 size="300"

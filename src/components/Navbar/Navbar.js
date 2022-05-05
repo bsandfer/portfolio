@@ -11,6 +11,7 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
+import Resume from "../../assets/other/resume.pdf"
  
 
 
@@ -130,12 +131,14 @@ const ResponsiveAppBar = ({pageState, setPageState}) => {
             >
               Contact
             </Button>
-            <Button
-              onClick={handleOpenNavMenu}
-              sx={{ my: 2, color: "white", display: "block" }}
-            >
-              Resume
-            </Button>
+            <a href={Resume} target="_blank" rel="noreferrer" style={{ textDecoration: 'underline #E3B23C' }}>
+              <Button
+                onClick={handleOpenNavMenu}
+                sx={{ my: 2, color: "white", display: "block" }}
+              >
+                Resume
+              </Button>
+            </a>
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
