@@ -49,7 +49,7 @@ const ResponsiveAppBar = ({pageState, setPageState}) => {
 
 
   return (
-    <AppBar position="static">
+    <AppBar padding="0" position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -91,16 +91,16 @@ const ResponsiveAppBar = ({pageState, setPageState}) => {
               }}
             >
               <MenuItem onClick={handleCloseNavMenu}>
-                <Typography textAlign="center">About</Typography>
+                <Typography >About</Typography>
               </MenuItem>
               <MenuItem onClick={handleCloseNavMenu}>
-                <Typography textAlign="center">Portfolio</Typography>
+                <Typography>Portfolio</Typography>
               </MenuItem>
               <MenuItem onClick={handleCloseNavMenu}>
-                <Typography textAlign="center">Contact</Typography>
+                <Typography>Contact</Typography>
               </MenuItem>
               <MenuItem onClick={handleCloseNavMenu}>
-                <Typography textAlign="center">Resume</Typography>
+                <Typography >Resume</Typography>
               </MenuItem>
             </Menu>
           </Box>
@@ -140,7 +140,7 @@ const ResponsiveAppBar = ({pageState, setPageState}) => {
               </Button>
             </a>
           </Box>
-
+{/* 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
@@ -167,9 +167,9 @@ const ResponsiveAppBar = ({pageState, setPageState}) => {
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
                   <Typography textAlign="center">{setting}</Typography>
                 </MenuItem>
-              ))}
-            </Menu>
-          </Box>
+              ))} */}
+            {/* </Menu> */}
+          {/* </Box> */}
         </Toolbar>
       </Container>
     </AppBar>

@@ -63,10 +63,12 @@ const Portfolio = () => {
 
   return (
     <>
-      <Box marginTop={3}>
+      <Box margin={3}>
           <Grid container justifyContent="center">
             <Typography variant="h3">Portfolio</Typography>
           </Grid>
+
+          <br></br>
 
           <Grid container spacing={4} padding={2} justifyContent="center">
             {projects.map((project) => (

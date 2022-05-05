@@ -34,6 +34,7 @@ const About = () => {
 
             <Grid item xs={12} md={3}>
               <Typography variant='h4'>Brendan Sandfer</Typography>
+              <br></br>
               <Typography paragraph>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                   eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
