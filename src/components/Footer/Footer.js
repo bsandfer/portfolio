@@ -8,7 +8,7 @@ const Footer = () => {
     <>
       <Paper>
         <Grid
-          position="absolute"
+          position="fixed"
           left="0"
           right="0"
           bottom="0"
@@ -16,6 +16,7 @@ const Footer = () => {
           justifyContent="center"
           spacing={1}
           padding={1.2}
+          bgcolor="#a6a69b"
         >
           <Grid item>
             <IconButton
