@@ -8,10 +8,10 @@ import { Avatar, Typography } from "@mui/material";
 const About = () => {
   return (
     <>
-      <Box>
+      <Box marginTop={3}>
           <Grid justifyContent="center" container padding={2} spacing={2}>
             
-            <Grid item xs={12} md={4}>
+            <Grid item xs={12} md={5}>
               <Avatar
                 alt="photo of me"
                 src={headshot}

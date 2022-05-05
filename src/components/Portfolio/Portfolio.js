@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
 import Card from "../Card";
 import ToysIcon from '@mui/icons-material/Toys';
@@ -63,24 +63,26 @@ const Portfolio = () => {
 
   return (
     <>
-      <Grid container justifyContent="center">
-        <Typography variant="h3">My Portfolio</Typography>
-      </Grid>
-
-      <Grid container spacing={4} padding={2} justifyContent="center">
-        {projects.map((project) => (
-          <Grid item>
-            <Card
-              title={project.title}
-              letter={project.letter}
-              github={project.github}
-              heroku={project.heroku}
-              image={project.image}
-              description={project.description}
-            ></Card>
+      <Box marginTop={3}>
+          <Grid container justifyContent="center">
+            <Typography variant="h3">Portfolio</Typography>
           </Grid>
-        ))}
-      </Grid>
+
+          <Grid container spacing={4} padding={2} justifyContent="center">
+            {projects.map((project) => (
+              <Grid item>
+                <Card
+                  title={project.title}
+                  letter={project.letter}
+                  github={project.github}
+                  heroku={project.heroku}
+                  image={project.image}
+                  description={project.description}
+                ></Card>
+              </Grid>
+            ))}
+          </Grid>
+      </Box>
     </>
   );
 };
