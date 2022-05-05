@@ -16,10 +16,10 @@ const SizedAvatar = styled(Avatar)`
 const About = () => {
   return (
     <>
-      <Box marginTop={3}>
+      <Box margin={3}>
         <Grid
-          sx={{ mx: "auto" }}
-          justifyContent="center"
+          // sx={{ mx: "auto" }}
+          justifyContent="space-evenly"
           container
           padding={2}
           spacing={2}
@@ -33,7 +33,7 @@ const About = () => {
             ></SizedAvatar>
           </Grid>
 
-          <Grid item md={1}></Grid>
+          {/* <Grid item md={1}></Grid> */}
 
           <Grid item xs={12} md={3}>
             <Typography variant="h4">Brendan Sandfer</Typography>
