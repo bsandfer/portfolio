@@ -115,9 +115,11 @@ const ResponsiveAppBar = ({pageState, setPageState}) => {
               <MenuItem onClick={handleCloseNavMenu3}>
                 <Typography>Contact</Typography>
               </MenuItem>
+              <a href={Resume} target="_blank" rel="noreferrer" style={{ color: 'black', textDecoration: 'underline #E3B23C' }}>
               <MenuItem onClick={handleCloseNavMenu4}>
                 <Typography >Resume</Typography>
               </MenuItem>
+              </a>
             </Menu>
           </Box>
           <Typography
