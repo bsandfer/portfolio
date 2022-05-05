@@ -7,19 +7,19 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
+// import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
+// import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import Resume from "../../assets/other/resume.pdf"
  
 
 
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+// const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const ResponsiveAppBar = ({pageState, setPageState}) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  // const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenAbout = () => {
     setPageState({...pageState, about: true, portfolio: false, contact: false})
@@ -35,18 +35,34 @@ const ResponsiveAppBar = ({pageState, setPageState}) => {
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
+  // const handleOpenUserMenu = (event) => {
+  //   setAnchorElUser(event.currentTarget);
+  // };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
+  const handleCloseNavMenu1 = () => {
+    setAnchorElNav(null);
+    handleOpenAbout()
+  };
+  const handleCloseNavMenu2 = () => {
+    setAnchorElNav(null);
+    handleOpenPortfolio()
+  };
+  const handleCloseNavMenu3 = () => {
+    setAnchorElNav(null);
+    handleOpenContact()
+  };
+  const handleCloseNavMenu4 = () => {
+    setAnchorElNav(null);
   };
 
+  // const handleCloseUserMenu = () => {
+  //   setAnchorElUser(null);
+  // };
+
+  
 
   return (
     <AppBar padding="0" position="static">
@@ -90,16 +106,16 @@ const ResponsiveAppBar = ({pageState, setPageState}) => {
                 display: { xs: "block", md: "none" },
               }}
             >
-              <MenuItem onClick={handleCloseNavMenu}>
+              <MenuItem onClick={handleCloseNavMenu1}>
                 <Typography >About</Typography>
               </MenuItem>
-              <MenuItem onClick={handleCloseNavMenu}>
+              <MenuItem onClick={handleCloseNavMenu2}>
                 <Typography>Portfolio</Typography>
               </MenuItem>
-              <MenuItem onClick={handleCloseNavMenu}>
+              <MenuItem onClick={handleCloseNavMenu3}>
                 <Typography>Contact</Typography>
               </MenuItem>
-              <MenuItem onClick={handleCloseNavMenu}>
+              <MenuItem onClick={handleCloseNavMenu4}>
                 <Typography >Resume</Typography>
               </MenuItem>
             </Menu>
