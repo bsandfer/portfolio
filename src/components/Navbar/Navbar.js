@@ -20,6 +20,17 @@ const ResponsiveAppBar = ({pageState, setPageState}) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
+  const handleOpenAbout = () => {
+    setPageState({...pageState, about: true, portfolio: false, contact: false})
+  }
+  const handleOpenPortfolio = () => {
+    setPageState({...pageState, about: false, portfolio: true, contact: false})
+  }
+  const handleOpenContact = () => {
+    setPageState({...pageState, about: false, portfolio: false, contact: true})
+  }
+
+
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -34,6 +45,7 @@ const ResponsiveAppBar = ({pageState, setPageState}) => {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+
 
   return (
     <AppBar position="static">
@@ -101,25 +113,25 @@ const ResponsiveAppBar = ({pageState, setPageState}) => {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             <Button
-              onClick={handleCloseNavMenu}
+              onClick={handleOpenAbout}
               sx={{ my: 2, color: "white", display: "block" }}
             >
               About
             </Button>
             <Button
-              onClick={handleCloseNavMenu}
+              onClick={handleOpenPortfolio}
               sx={{ my: 2, color: "white", display: "block" }}
             >
               Portfolio
             </Button>
             <Button
-              onClick={handleCloseNavMenu}
+              onClick={handleOpenContact}
               sx={{ my: 2, color: "white", display: "block" }}
             >
               Contact
             </Button>
             <Button
-              onClick={handleCloseNavMenu}
+              onClick={handleOpenNavMenu}
               sx={{ my: 2, color: "white", display: "block" }}
             >
               Resume
