@@ -1,4 +1,4 @@
-import { Box, Grid, Typography } from "@mui/material"
+import { Box, Button, FormControl, Grid, Typography } from "@mui/material"
 import React, { Component } from "react"
 
 export default class YourComponent extends Component {
@@ -31,26 +31,26 @@ export default class YourComponent extends Component {
 
         <Grid container justifyContent="center" spacing={3} padding={3}>
 
-          <Grid item>
-              <div>
-                <div>
-                  <textarea
-                    ref={(textarea) => this.textArea = textarea}
-                    value="bSandfer@gmail.com"
-                  />
-                </div>
-                <div>
-                  <button onClick={() => this.copyCodeToClipboard()}>
-                    Copy to Clipboard
-                  </button>
+        <Grid item xs={10} md={8} lg={6}>
+            <FormControl fullWidth>
+
+              <textarea
+                ref={(textarea) => this.textArea = textarea}
+                value="bSandfer@gmail.com"        
+              /> 
+              <br></br>
+
+              <Button variant="contained" onClick={() => this.copyCodeToClipboard()}>
+                Copy my Email to clipboard
+              </Button>
                   {
                     this.state.copySuccess ?
-                    <div style={{"color": "green"}}>
+                    <Box style={{"color": "green"}}>
                       Success!
-                    </div> : null
+                    </Box> : null
                   }
-                </div>
-              </div>
+
+            </FormControl>
           </Grid>
 
         </Grid>
