@@ -16,7 +16,7 @@ import MenuItem from "@mui/material/MenuItem";
 
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
-const ResponsiveAppBar = () => {
+const ResponsiveAppBar = ({pageState, setPageState}) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Navbar from "./components/Navbar"
 import CssBaseline from '@mui/material/CssBaseline';
 import About from "./components/About";
@@ -45,14 +46,21 @@ const theme = createTheme({
 
 
 function App() {
+  const [pageState, setPageState] = useState({
+    about: true,
+    work: false,
+    contact: false
+  })
+
+
   return (
     <>
       <ThemeProvider theme={theme}>
         <CssBaseline/>
-        <Navbar/>
-        <About/>
-        <Portfolio/>
-        <Contact/>
+        <Navbar pageState={pageState} setPageState={setPageState} />
+        {pageState.about? <About/>: ''}
+        {pageState.portfolio? <Portfolio/>: ''}
+        {pageState.contact? <Contact/>: ''}
         <Footer/>
       </ThemeProvider>
     </>

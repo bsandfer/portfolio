@@ -7,8 +7,9 @@ import React from 'react'
 const Footer = () => {
   return (
     <>
+      
       <Paper>
-        <Grid container justifyContent="center" spacing={1} padding={1.2}>
+        <Grid position="absolute" left="0" right="0" bottom="0" container justifyContent="center" spacing={1} padding={1.2}>
             <Grid item>
                
                   <IconButton href='https://github.com/bsandfer' target="_blank" rel="noreferrer">
@@ -25,6 +26,7 @@ const Footer = () => {
             </Grid>
         </Grid>
       </Paper>
+      
     </>
   )
 }
