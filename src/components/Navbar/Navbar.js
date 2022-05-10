@@ -27,9 +27,9 @@ const ResponsiveAppBar = ({pageState, setPageState}) => {
   const handleOpenPortfolio = () => {
     setPageState({...pageState, about: false, portfolio: true, contact: false})
   }
-  const handleOpenContact = () => {
-    setPageState({...pageState, about: false, portfolio: false, contact: true})
-  }
+  // const handleOpenContact = () => {
+  //   setPageState({...pageState, about: false, portfolio: false, contact: true})
+  // }
 
 
   const handleOpenNavMenu = (event) => {
@@ -50,10 +50,10 @@ const ResponsiveAppBar = ({pageState, setPageState}) => {
     setAnchorElNav(null);
     handleOpenPortfolio()
   };
-  const handleCloseNavMenu3 = () => {
-    setAnchorElNav(null);
-    handleOpenContact()
-  };
+  // const handleCloseNavMenu3 = () => {
+  //   setAnchorElNav(null);
+  //   handleOpenContact()
+  // };
   const handleCloseNavMenu4 = () => {
     setAnchorElNav(null);
   };
@@ -112,9 +112,12 @@ const ResponsiveAppBar = ({pageState, setPageState}) => {
               <MenuItem onClick={handleCloseNavMenu2}>
                 <Typography>Portfolio</Typography>
               </MenuItem>
-              <MenuItem onClick={handleCloseNavMenu3}>
-                <Typography>Contact</Typography>
+              <a href="mailto:bsandfer@gmail.com" style={{ color: 'black', textDecoration: 'none' }}>
+              <MenuItem onClick={handleCloseNavMenu}>
+                <Typography
+                >Contact</Typography>
               </MenuItem>
+              </a>
               <a href={Resume} target="_blank" rel="noreferrer" style={{ color: 'black', textDecoration: 'underline #E3B23C' }}>
               <MenuItem onClick={handleCloseNavMenu4}>
                 <Typography >Resume</Typography>
@@ -144,7 +147,7 @@ const ResponsiveAppBar = ({pageState, setPageState}) => {
               Portfolio
             </Button>
             <Button
-              onClick={handleOpenContact}
+              href="mailto:bsandfer@gmail.com"
               sx={{ my: 2, color: "white", display: "block" }}
             >
               Contact
