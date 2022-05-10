@@ -1,11 +1,16 @@
-import React from "react";
-import Box from "@mui/material/Box";
 // import Paper from "@mui/material/Paper";
-import Grid from "@mui/material/Grid";
 // import headshot from "../../assets/images/parkPup.png";
-import { Typography } from "@mui/material";
 // import { Avatar } from "@mui/material";
 // import styled from "@emotion/styled";
+import React from "react";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
+import { IconButton, Typography } from "@mui/material";
+import TypeAnimation from "react-type-animation"
+import Resume from "../../assets/other/resume.pdf"
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import DownloadForOfflineIcon from '@mui/icons-material/DownloadForOffline';
 
 // const SizedAvatar = styled(Avatar)`
 //   ${({ size, theme }) => `
@@ -14,13 +19,15 @@ import { Typography } from "@mui/material";
 //   `};
 // `;
 
+
+
 const About = () => {
   return (
     <>
       <Box margin={3}>
         <Grid
           // sx={{ mx: "auto" }}
-          justifyContent="space-evenly"
+          justifyContent="center"
           container
           padding={2}
           spacing={2}
@@ -36,15 +43,47 @@ const About = () => {
 
           {/* <Grid item md={1}></Grid> */}
 
-          <Grid item xs={12} md={3}>
+          <Grid item xs={12} md={4}>
             <Typography variant="h4">Brendan Sandfer</Typography>
             <br></br>
             <Typography paragraph>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+            <TypeAnimation
+            cursor={true}
+            sequence={['"Hello, world."']}
+            wrapper="p"
+            />My name is Brendan Sandfer, and I design and develop software solutions. I am a full-stack web developer and I aim to stay on the cutting edge by continually learning new technologies and growing as a developer and software engineer. I bring passion and dedication to all my projects, with empathy for users, and curiosity for the ever-evolving business. I am experienced in working in fast-paced team-oriented environments, and enthusiastic to take on new problems and push the next-generation of technology forward.
             </Typography>
+            <Box class="linkBox">
+            <IconButton
+            href="https://github.com/bsandfer"
+            target="_blank"
+            rel="noreferrer"
+            >
+            <GitHubIcon fontSize="large" color="primary"></GitHubIcon>
+            </IconButton>
+
+            <IconButton
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noreferrer"
+            >
+            <LinkedInIcon fontSize="large" color="primary"></LinkedInIcon>
+            </IconButton>
+
+            <Typography variant="h7">Download my resume  </Typography>
+            
+            <IconButton
+            href={ Resume }
+            target="_blank"
+            rel="noreferrer"
+            >
+              <DownloadForOfflineIcon
+              fontSize="large"
+              color="primary"
+              paddingTop="2"
+              />
+            </IconButton>
+            </Box>
           </Grid>
         </Grid>
       </Box>
