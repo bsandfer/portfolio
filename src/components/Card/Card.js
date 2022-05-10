@@ -39,7 +39,7 @@ const RecipeReviewCard = ({
   };
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card>
       <CardHeader
         avatar={
           <Avatar sx={{ color: "black", bgcolor: "#E3B23C" }} variant="rounded">

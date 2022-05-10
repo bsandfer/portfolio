@@ -2,6 +2,14 @@ import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
 import Card from "../Card";
 import ToysIcon from '@mui/icons-material/Toys';
+import Masonry from 'react-masonry-css'
+
+const breakpointColumnsObj = {
+  default: 4,
+  1100: 3,
+  700: 2,
+  500: 1
+};
 
 const Portfolio = () => {
   let projects = [
@@ -70,9 +78,12 @@ const Portfolio = () => {
 
           <br></br>
 
-          <Grid container spacing={4} padding={2} justifyContent="center">
+          <Masonry 
+            breakpointCols={breakpointColumnsObj}
+            className="my-masonry-grid"
+            columnClassName="my-masonry-grid_column">
             {projects.map((project) => (
-              <Grid item>
+              <div>
                 <Card
                   title={project.title}
                   letter={project.letter}
@@ -81,9 +92,9 @@ const Portfolio = () => {
                   image={project.image}
                   description={project.description}
                 ></Card>
-              </Grid>
+              </div>
             ))}
-          </Grid>
+          </Masonry>
       </Box>
     </>
   );
