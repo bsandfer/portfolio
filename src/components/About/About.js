@@ -30,8 +30,8 @@ const About = () => {
           // sx={{ mx: "auto" }}
           justifyContent="center"
           container
-          padding={2}
-          spacing={2}
+          // padding={2}
+          // spacing={2}
         >
           {/* <Grid item md={3}>
             <SizedAvatar
