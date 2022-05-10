@@ -71,7 +71,7 @@ const Portfolio = () => {
 
   return (
     <>
-      <Box margin={3} paddingBottom={6}>
+      <Box margin={3} paddingBottom={6} marginLeft={6} marginRight={6}>
           <Grid container justifyContent="center">
             <Typography variant="h3">Portfolio</Typography>
           </Grid>
