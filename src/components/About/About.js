@@ -12,6 +12,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import DownloadForOfflineIcon from '@mui/icons-material/DownloadForOffline';
 
+
 // const SizedAvatar = styled(Avatar)`
 //   ${({ size, theme }) => `
 //     width: ${theme.spacing(size)}px; 
@@ -44,14 +45,18 @@ const About = () => {
           {/* <Grid item md={1}></Grid> */}
 
           <Grid item xs={12} md={4}>
-            <Typography variant="h4">Brendan Sandfer</Typography>
+            <Typography variant="h3">About</Typography>
             <br></br>
             <Typography paragraph>
+              <div style={{width: '7em', height: '1.5em'}}>
             <TypeAnimation
             cursor={true}
-            sequence={['"Hello, world."']}
+            sequence={['', 1000, '"Hello, world."', 1000]}
             wrapper="p"
-            />My name is Brendan Sandfer, and I design and develop software solutions. I am a full-stack web developer and I aim to stay on the cutting edge by continually learning new technologies and growing as a developer and software engineer. I bring passion and dedication to all my projects, with empathy for users, and curiosity for the ever-evolving business. I am experienced in working in fast-paced team-oriented environments, and enthusiastic to take on new problems and push the next-generation of technology forward.
+            repeat={1}
+            />
+            </div>
+            My name is Brendan Sandfer, and I design and develop software solutions. I am a full-stack web developer and I aim to stay on the cutting edge by continually learning new technologies and growing as a developer and software engineer. I bring passion and dedication to all my projects, with empathy for users, and curiosity for the ever-evolving business. I am experienced in working in fast-paced team-oriented environments, and enthusiastic to take on new problems and push the next-generation of technology forward.
             </Typography>
             <Box class="linkBox">
             <IconButton
