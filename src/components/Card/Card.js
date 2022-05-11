@@ -12,6 +12,7 @@ import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
+import { Tooltip } from "@mui/material";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -53,16 +54,21 @@ const RecipeReviewCard = ({
         <Typography paragraph>{description}</Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
+        <Tooltip title="Project's Github">
+        <IconButton>
           <a href={github} target="_blank" rel="noreferrer">
             <GitHubIcon color="primary" />
           </a>
         </IconButton>
-        <IconButton aria-label="share">
+        </Tooltip>
+
+        <Tooltip title="Visit deployed site">
+        <IconButton>
           <a href={heroku} target="_blank" rel="noreferrer">
             <RocketLaunchIcon color="primary" />
           </a>
         </IconButton>
+        </Tooltip>
         <ExpandMore
           expand={expanded}
           onClick={handleExpandClick}

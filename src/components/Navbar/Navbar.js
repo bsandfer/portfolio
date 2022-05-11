@@ -12,6 +12,11 @@ import Button from "@mui/material/Button";
 // import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import Resume from "../../assets/other/resume.pdf"
+import { Tooltip } from "@mui/material";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import EmailIcon from '@mui/icons-material/Email';
+import DownloadForOfflineIcon from '@mui/icons-material/DownloadForOffline';
  
 
 
@@ -54,10 +59,10 @@ const ResponsiveAppBar = ({pageState, setPageState}) => {
   //   setAnchorElNav(null);
   //   handleOpenContact()
   // };
-  const handleCloseNavMenu4 = () => {
-    setAnchorElNav(null);
-    alert('Thank you for your consideration! Have a nice day 🙂')
-  };
+  // const handleCloseNavMenu4 = () => {
+  //   setAnchorElNav(null);
+  //   alert('Thank you for your consideration! Have a nice day 🙂')
+  // };
 
   // const handleCloseUserMenu = () => {
   //   setAnchorElUser(null);
@@ -66,22 +71,21 @@ const ResponsiveAppBar = ({pageState, setPageState}) => {
   
 
   return (
-    <AppBar padding="0" position="static">
+    <AppBar padding="0" position="static" color="transparent" elevation={0}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Typography
+          {/* <Typography
             variant="h6"
             noWrap
             component="div"
             sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
           >
             Brendan Sandfer
-          </Typography>
+          </Typography> */}
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
-              aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
@@ -113,7 +117,7 @@ const ResponsiveAppBar = ({pageState, setPageState}) => {
               <MenuItem onClick={handleCloseNavMenu2}>
                 <Typography>Portfolio</Typography>
               </MenuItem>
-              <a href="mailto:bsandfer@gmail.com" style={{ color: 'black', textDecoration: 'none' }}>
+              {/* <a href="mailto:bsandfer@gmail.com" style={{ color: 'black', textDecoration: 'none' }}>
               <MenuItem onClick={handleCloseNavMenu}>
                 <Typography
                 >Contact</Typography>
@@ -123,49 +127,97 @@ const ResponsiveAppBar = ({pageState, setPageState}) => {
               <MenuItem onClick={handleCloseNavMenu4}>
                 <Typography >Resume</Typography>
               </MenuItem>
-              </a>
+              </a> */}
             </Menu>
           </Box>
-          <Typography
+          {/* <Typography
             variant="h6"
             noWrap
             component="div"
             sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
           >
             Brendan Sandfer
-          </Typography>
+          </Typography> */}
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             <Button
+              size="small"
               onClick={handleOpenAbout}
-              sx={{ my: 2, color: "white", display: "block" }}
+              sx={{ my: 2, color: "primary", display: "block" }}
             >
               About
             </Button>
             <Button
+              size="small"
               onClick={handleOpenPortfolio}
-              sx={{ my: 2, color: "white", display: "block" }}
+              sx={{ my: 2, color: "primary", display: "block" }}
             >
               Portfolio
             </Button>
-            <Button
+            {/* <Button
+              size="small"
               href="mailto:bsandfer@gmail.com"
-              sx={{ my: 2, color: "white", display: "block" }}
+              sx={{ my: 2, color: "primary", display: "block" }}
             >
               Contact
             </Button>
             <a href={Resume} target="_blank" rel="noreferrer" style={{ textDecoration: 'underline #E3B23C' }}>
               <Button
+                size="small"
                 onClick={() => {
                   alert('Thank you for your consideration! Have a nice day 🙂')}}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{ my: 2, color: "primary", display: "block" }}
               >
                 Resume
               </Button>
-            </a>
+            </a> */}
           </Box>
-{/* 
+
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
+            <Tooltip title="Github">
+            <IconButton
+              href="https://github.com/bsandfer"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <GitHubIcon fontSize="large" color="primary"></GitHubIcon>
+            </IconButton>
+            </Tooltip>
+          
+            <Tooltip title="LinkedIn">
+            <IconButton
+              href="https://www.linkedin.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <LinkedInIcon fontSize="large" color="primary"></LinkedInIcon>
+            </IconButton>
+            </Tooltip>
+          
+            <Tooltip title="send me an Email">
+            <IconButton
+              href="mailto:bsandfer@gmail.com"
+            >
+              <EmailIcon fontSize="large" color="primary"></EmailIcon>
+            </IconButton>
+            </Tooltip>
+            
+            <Tooltip title="view my resume">
+            <IconButton
+            onClick={() => {
+              alert('Thank you for your consideration! Have a nice day 🙂')
+            }}
+            href={ Resume }
+            target="_blank"
+            rel="noreferrer"
+            >
+              <DownloadForOfflineIcon
+              fontSize="large"
+              color="primary"
+              paddingTop="2"
+              />
+            </IconButton>
+            </Tooltip>
+            {/* <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
               </IconButton>
@@ -190,9 +242,9 @@ const ResponsiveAppBar = ({pageState, setPageState}) => {
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
                   <Typography textAlign="center">{setting}</Typography>
                 </MenuItem>
-              ))} */}
-            {/* </Menu> */}
-          {/* </Box> */}
+              ))} 
+             </Menu>  */}
+          </Box> 
         </Toolbar>
       </Container>
     </AppBar>

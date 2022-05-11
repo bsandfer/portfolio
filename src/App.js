@@ -3,8 +3,8 @@ import Navbar from "./components/Navbar"
 import CssBaseline from '@mui/material/CssBaseline';
 import About from "./components/About";
 import Portfolio from "./components/Portfolio";
-import Contact from "./components/Contact/Contact";
-import Footer from "./components/Footer";
+// import Contact from "./components/Contact/Contact";
+// import Footer from "./components/Footer";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const theme = createTheme({
@@ -60,8 +60,8 @@ function App() {
         <Navbar pageState={pageState} setPageState={setPageState} />
         {pageState.about? <About/>: ''}
         {pageState.portfolio? <Portfolio/>: ''}
-        {pageState.contact? <Contact/>: ''}
-        <Footer/>
+        {/* {pageState.contact? <Contact/>: ''} */}
+        {/* <Footer/> */}
       </ThemeProvider>
     </>
 
