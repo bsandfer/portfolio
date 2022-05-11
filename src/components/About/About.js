@@ -2,16 +2,17 @@
 // import headshot from "../../assets/images/parkPup.png";
 // import { Avatar } from "@mui/material";
 // import styled from "@emotion/styled";
-import React from "react";
-import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid";
-import {  Typography } from "@mui/material";
-import TypeAnimation from "react-type-animation"
 // import Resume from "../../assets/other/resume.pdf"
 // import GitHubIcon from "@mui/icons-material/GitHub";
 // import LinkedInIcon from "@mui/icons-material/LinkedIn";
 // import DownloadForOfflineIcon from '@mui/icons-material/DownloadForOffline';
 // import { Tooltip } from "@mui/material";
+import React from "react";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
+import {  Typography } from "@mui/material";
+import TypeAnimation from "react-type-animation"
+
 
 
 // const SizedAvatar = styled(Avatar)`
@@ -101,7 +102,7 @@ const About = () => {
 
             </Box> */}
           </Grid>
-          <Grid item xs={12} padding={5}></Grid>
+          {/* <Grid item xs={12} padding={5}></Grid> */}
 
 
         </Grid>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import Navbar from "./components/Navbar"
 import CssBaseline from '@mui/material/CssBaseline';
 import About from "./components/About";
@@ -6,6 +6,7 @@ import Portfolio from "./components/Portfolio";
 // import Contact from "./components/Contact/Contact";
 // import Footer from "./components/Footer";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { Canvas, useFrame } from '@react-three/fiber'
 
 const theme = createTheme({
   palette: {
@@ -45,6 +46,24 @@ const theme = createTheme({
 
 
 
+function MyRotatingBox() {
+  const myMesh = React.useRef()
+  
+  useFrame(({ clock }) => {
+    const a = clock.getElapsedTime();
+    myMesh.current.rotation.y = a;
+    myMesh.current.rotation.x = a;
+  });
+  return (
+    <mesh ref={myMesh}>
+      <boxBufferGeometry />
+      <meshPhongMaterial color="#E3B23C" />
+    </mesh>
+  );
+}
+
+
+
 function App() {
   const [pageState, setPageState] = useState({
     about: true,
@@ -62,6 +81,11 @@ function App() {
         {pageState.portfolio? <Portfolio/>: ''}
         {/* {pageState.contact? <Contact/>: ''} */}
         {/* <Footer/> */}
+        <Canvas>
+          <MyRotatingBox/>
+          <ambientLight intensity={0.1} />
+          <directionalLight color="white" position={[0, 0, 5]} />
+        </Canvas>
       </ThemeProvider>
     </>
 
