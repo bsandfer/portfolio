@@ -55,10 +55,12 @@ function MyRotatingBox() {
     myMesh.current.rotation.x = a;
   });
   return (
-    <mesh ref={myMesh}>
-      <boxBufferGeometry />
-      <meshPhongMaterial color="#E3B23C" />
-    </mesh>
+    <>
+      <mesh ref={myMesh} scale={3}>
+        <boxBufferGeometry />
+        <meshPhongMaterial color="#E3B23C" />
+      </mesh>
+    </>
   );
 }
 
