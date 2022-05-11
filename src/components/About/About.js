@@ -11,6 +11,7 @@ import Resume from "../../assets/other/resume.pdf"
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import DownloadForOfflineIcon from '@mui/icons-material/DownloadForOffline';
+import { Tooltip } from "@mui/material";
 
 
 // const SizedAvatar = styled(Avatar)`
@@ -59,6 +60,7 @@ const About = () => {
             My name is Brendan Sandfer, and I design and develop software solutions. I am a full-stack web developer and I aim to stay on the cutting edge by continually learning new technologies and growing as a developer and software engineer. I bring passion and dedication to all my projects, with empathy for users, and curiosity for the ever-evolving business. I am experienced in working in fast-paced team-oriented environments, and enthusiastic to take on new problems and push the next-generation of technology forward.
             </Typography>
             <Box class="linkBox">
+            <Tooltip title="Github">
             <IconButton
             href="https://github.com/bsandfer"
             target="_blank"
@@ -66,7 +68,9 @@ const About = () => {
             >
             <GitHubIcon fontSize="large" color="primary"></GitHubIcon>
             </IconButton>
+            </Tooltip>
 
+            <Tooltip title="LinkedIn">
             <IconButton
             href="https://linkedin.com"
             target="_blank"
@@ -74,10 +78,15 @@ const About = () => {
             >
             <LinkedInIcon fontSize="large" color="primary"></LinkedInIcon>
             </IconButton>
+            </Tooltip>
 
             <Typography variant="h7">Download my resume  </Typography>
             
+            <Tooltip title="Resume">
             <IconButton
+            onClick={() => {
+              alert('Thank you for your consideration! Have a nice day 🙂')
+            }}
             href={ Resume }
             target="_blank"
             rel="noreferrer"
@@ -88,6 +97,8 @@ const About = () => {
               paddingTop="2"
               />
             </IconButton>
+            </Tooltip>
+
             </Box>
           </Grid>
           <Grid item xs={12} padding={5}></Grid>

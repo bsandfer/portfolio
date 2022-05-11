@@ -56,6 +56,7 @@ const ResponsiveAppBar = ({pageState, setPageState}) => {
   // };
   const handleCloseNavMenu4 = () => {
     setAnchorElNav(null);
+    alert('Thank you for your consideration! Have a nice day 🙂')
   };
 
   // const handleCloseUserMenu = () => {
@@ -154,7 +155,8 @@ const ResponsiveAppBar = ({pageState, setPageState}) => {
             </Button>
             <a href={Resume} target="_blank" rel="noreferrer" style={{ textDecoration: 'underline #E3B23C' }}>
               <Button
-                onClick={handleOpenNavMenu}
+                onClick={() => {
+                  alert('Thank you for your consideration! Have a nice day 🙂')}}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
                 Resume
