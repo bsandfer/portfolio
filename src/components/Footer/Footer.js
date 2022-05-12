@@ -34,7 +34,7 @@ const Footer = () => {
           <Grid item>
             <Tooltip title="LinkedIn">
             <IconButton
-              href="https://www.linkedin.com/"
+              href="https://www.linkedin.com/in/bsandfer/"
               target="_blank"
               rel="noreferrer"
             >

@@ -185,7 +185,7 @@ const ResponsiveAppBar = ({pageState, setPageState}) => {
           
             <Tooltip title="LinkedIn">
             <IconButton
-              href="https://www.linkedin.com/"
+              href="https://www.linkedin.com/in/bsandfer/"
               target="_blank"
               rel="noreferrer"
             >
