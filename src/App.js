@@ -11,7 +11,6 @@ import { OrbitControls } from "@react-three/drei";
 
 
 
-
 const theme = createTheme({
   palette: {
     type: 'light',
@@ -75,6 +74,7 @@ function App() {
     work: false,
     contact: false
   })
+
 
 
   return (
