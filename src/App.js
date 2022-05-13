@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Suspense, useState } from "react";
 import Navbar from "./components/Navbar"
 import CssBaseline from '@mui/material/CssBaseline';
 import About from "./components/About";
@@ -7,6 +7,10 @@ import Portfolio from "./components/Portfolio";
 // import Footer from "./components/Footer";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Canvas, useFrame } from '@react-three/fiber'
+import { OrbitControls } from "@react-three/drei";
+
+
+
 
 const theme = createTheme({
   palette: {
@@ -43,7 +47,6 @@ const theme = createTheme({
     fontWeightBold: 700,
   }
 })
-
 
 
 function MyRotatingBox() {
@@ -84,9 +87,13 @@ function App() {
         {/* {pageState.contact? <Contact/>: ''} */}
         {/* <Footer/> */}
         <Canvas>
-          <MyRotatingBox/>
-          <ambientLight intensity={0.1} />
-          <directionalLight color="white" position={[0, 0, 5]} />
+          <Suspense fallback={null}>
+            <MyRotatingBox/>
+            <ambientLight intensity={0.1} />
+            <directionalLight color="white" position={[0, 0, 5]} />
+            <OrbitControls />
+            
+          </Suspense>
         </Canvas>
       </ThemeProvider>
     </>
