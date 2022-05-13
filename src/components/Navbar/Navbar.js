@@ -140,14 +140,14 @@ const ResponsiveAppBar = ({pageState, setPageState}) => {
           </Typography> */}
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             <Button
-              size="small"
+              size="large"
               onClick={handleOpenAbout}
               sx={{ my: 2, color: "primary", display: "block" }}
             >
               About
             </Button>
             <Button
-              size="small"
+              size="large"
               onClick={handleOpenPortfolio}
               sx={{ my: 2, color: "primary", display: "block" }}
             >
