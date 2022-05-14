@@ -35,7 +35,7 @@ function MyRotatingBox() {
   });
   return (
     <>
-      <mesh ref={myMesh} scale={3}>
+      <mesh ref={myMesh} scale={1.5}>
         <boxBufferGeometry />
         <meshPhongMaterial color="#E3B23C" />
       </mesh>
