@@ -7,11 +7,13 @@
 // import LinkedInIcon from "@mui/icons-material/LinkedIn";
 // import DownloadForOfflineIcon from '@mui/icons-material/DownloadForOffline';
 // import { Tooltip } from "@mui/material";
-import React from "react";
+import React, { Suspense } from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import {  Typography } from "@mui/material";
 import TypeAnimation from "react-type-animation"
+import { Canvas, useFrame } from '@react-three/fiber'
+import { OrbitControls } from "@react-three/drei";
 
 
 
@@ -21,6 +23,25 @@ import TypeAnimation from "react-type-animation"
 //     height: ${theme.spacing(size)}px; 
 //   `};
 // `;
+
+
+function MyRotatingBox() {
+  const myMesh = React.useRef()
+  
+  useFrame(({ clock }) => {
+    const a = clock.getElapsedTime();
+    myMesh.current.rotation.y = a;
+    myMesh.current.rotation.x = a;
+  });
+  return (
+    <>
+      <mesh ref={myMesh} scale={3}>
+        <boxBufferGeometry />
+        <meshPhongMaterial color="#E3B23C" />
+      </mesh>
+    </>
+  );
+}
 
 
 
@@ -106,6 +127,15 @@ const About = () => {
 
 
         </Grid>
+        <Canvas>
+          <Suspense fallback={null}>
+            <MyRotatingBox/>
+            <ambientLight intensity={0.1} />
+            <directionalLight color="white" position={[0, 0, 5]} />
+            <OrbitControls />
+            
+          </Suspense>
+        </Canvas>
       </Box>
     </>
   );
