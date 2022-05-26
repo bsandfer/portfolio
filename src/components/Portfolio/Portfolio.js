@@ -2,6 +2,10 @@ import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
 import Card from "../Card";
 import ToysIcon from '@mui/icons-material/Toys';
+import ThermostatIcon from '@mui/icons-material/Thermostat';
+import LocalPharmacyIcon from '@mui/icons-material/LocalPharmacy';
+import SpeakerNotesIcon from '@mui/icons-material/SpeakerNotes';
+import MenuBookIcon from '@mui/icons-material/MenuBook';
 import Masonry from 'react-masonry-css'
 
 
@@ -16,58 +20,49 @@ const breakpointColumnsObj = {
 const Portfolio = () => {
   let projects = [
     {
-      title: "example1",
+      title: "Amiibo Locator",
       letter: <ToysIcon/>,
-      github: "https://github.com/",
-      heroku: "https://dashboard.heroku.com/",
-      description: "bleep one",
+      github: "https://github.com/bsandfer/amiibo-locator",
+      heroku: "https://bsandfer.github.io/amiibo-locator/",
+      description: "This application is for gamers to find amiibos from a list of games.",
       image:
-        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80",
+        "https://raw.githubusercontent.com/bsandfer/amiibo-locator/main/images/wireFrame.png",
     },
     {
-      title: "example2",
-      letter: "B",
-      github: "https://github.com/",
-      heroku: "https://dashboard.heroku.com/",
-      description: "bleep two",
+      title: "Weather Dashboard",
+      letter: <ThermostatIcon/>,
+      github: "https://github.com/bsandfer/weather-dashboard",
+      heroku: "https://bsandfer.github.io/weather-dashboard/",
+      description: "A Weather Dashboard applicaton.",
       image:
-        "https://images.unsplash.com/photo-1584949091598-c31daaaa4aa9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "https://github.com/bsandfer/weather-dashboard/blob/main/assets/WeatherDashboardScreenshot.png?raw=true",
     },
     {
-      title: "example3",
-      letter: "C",
-      github: "https://github.com/",
-      heroku: "https://dashboard.heroku.com/",
-      description: "bleep three",
+      title: "Hospital Management System",
+      letter: <LocalPharmacyIcon/>,
+      github: "https://github.com/NGGKI/GHW--Hospital-Management-System",
+      heroku: "https://hosp-man-sys.herokuapp.com/",
+      description: "An application that helps manage the information related to health care and aids in the job completion of health care providers effectively. ",
       image:
-        "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "https://github.com/NGGKI/GHW--Hospital-Management-System/blob/main/assets/login.png?raw=true",
     },
     {
-      title: "example4",
-      letter: "D",
-      github: "https://github.com/",
-      heroku: "https://dashboard.heroku.com/",
-      description: "bleep four",
+      title: "Note Taker",
+      letter: <SpeakerNotesIcon/>,
+      github: "https://github.com/bsandfer/note-taker",
+      heroku: "https://note-taker-bsandfer.herokuapp.com/",
+      description: "An Application for writing, saving and deleting notes.",
       image:
-        "https://images.unsplash.com/photo-1546900703-cf06143d1239?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1450&q=80",
+        "https://github.com/bsandfer/note-taker/blob/main/assets/NoteTakerScreenshot.png?raw=true",
     },
     {
-      title: "example5",
-      letter: "E",
-      github: "https://github.com/",
-      heroku: "https://dashboard.heroku.com/",
-      description: "bleep five",
+      title: "README Generator",
+      letter: <MenuBookIcon/>,
+      github: "https://github.com/bsandfer/readme-generator",
+      heroku: "https://github.com/bsandfer/readme-generator",
+      description: "This is a command line application for generating README.md files.",
       image:
-        "https://images.unsplash.com/photo-1617042375876-a13e36732a04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-    },
-    {
-      title: "example6",
-      letter: "F",
-      github: "https://github.com/",
-      heroku: "https://dashboard.heroku.com/",
-      description: "bleep six",
-      image:
-        "https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "https://github.com/bsandfer/readme-generator/blob/main/READMEmdScreenshot.png?raw=true",
     },
   ];
 
