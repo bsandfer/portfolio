@@ -4,7 +4,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import About from "./components/About";
 import Portfolio from "./components/Portfolio";
 // import Contact from "./components/Contact/Contact";
-// import Footer from "./components/Footer";
+import Footer from "./components/Footer";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 
@@ -68,7 +68,7 @@ function App() {
         {pageState.about? <About/>: ''}
         {pageState.portfolio? <Portfolio/>: ''}
         {/* {pageState.contact? <Contact/>: ''} */}
-        {/* <Footer/> */}
+        <Footer/>
       </ThemeProvider>
     </>
 
