@@ -22,6 +22,9 @@ const Footer = () => {
           bgcolor="#a6a69b"
         >
           <Grid item>
+            
+          </Grid>
+          <Grid item>
             <Tooltip title="send me an Email">
             <a href="mailto:bsandfer@gmail.com"> 
             <Typography>bsandfer@gmail.com</Typography>
