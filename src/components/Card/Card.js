@@ -32,6 +32,7 @@ const RecipeReviewCard = ({
   heroku,
   description,
   image,
+  technologies,
 }) => {
   const [expanded, setExpanded] = React.useState(false);
 
@@ -71,20 +72,22 @@ const RecipeReviewCard = ({
           </a>
         </IconButton>
         </Tooltip>
-        {/* <ExpandMore
+        <ExpandMore
           expand={expanded}
           onClick={handleExpandClick}
           aria-expanded={expanded}
           aria-label="show more"
         >
+          <Tooltip title="Project details">
           <ExpandMoreIcon />
-        </ExpandMore> */}
+          </Tooltip>
+        </ExpandMore>
       </CardActions>
-      {/* <Collapse in={expanded} timeout="auto" unmountOnExit>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography paragraph></Typography>
+          <Typography paragraph>{technologies}</Typography>
         </CardContent>
-      </Collapse> */}
+      </Collapse>
     </Card>
   );
 };
