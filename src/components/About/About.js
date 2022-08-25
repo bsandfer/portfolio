@@ -68,7 +68,7 @@ const About = () => {
             repeat={1}
             />
             </div>
-            My name is Brendan Sandfer, and I design and develop software solutions. I am a full-stack web developer and I aim to stay on the cutting edge by continually learning new technologies and growing as a developer and software engineer. I bring passion and dedication to all my projects, with empathy for users, and curiosity for the ever-evolving business. I am experienced in working in fast-paced team-oriented environments, and enthusiastic to take on new problems and push the next-generation of technology forward.
+            My name is Brendan Sandfer, and I design and develop software solutions. I am a full-stack web developer and I aim to stay on the cutting edge by continually learning new technologies and growing as a developer and software engineer. I bring passion and dedication to all my projects, with empathy for users, and curiosity for the ever-evolving business. I am experienced working in fast-paced team-oriented environments, and enthusiastic to take on new problems and push the next-generation of technology forward.
             </Typography>
           </Grid>
         </Grid>
