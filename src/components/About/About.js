@@ -69,9 +69,8 @@ const About = () => {
               growing as a developer and software engineer. I bring passion and
               dedication to all my projects, with empathy for users, and
               curiosity for the ever-evolving business. I am experienced working
-              in fast-paced team-oriented environments, and enthusiastic to take
-              on new problems and push the next-generation of technology
-              forward.
+              in fast-paced team-oriented environments, enthusiastic to take on
+              new problems and push the next-generation of technology forward.
             </Typography>
           </Grid>
         </Grid>
