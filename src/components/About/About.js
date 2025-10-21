@@ -48,8 +48,8 @@ const About = () => {
           // sx={{ mx: "auto" }}
           justifyContent="center"
           container
-          // padding={2}
-          // spacing={2}
+        // padding={2}
+        // spacing={2}
         >
           <Grid item xs={12} md={4}>
             <Typography variant="h3">Brendan Sandfer</Typography>
@@ -63,14 +63,14 @@ const About = () => {
                   repeat={1}
                 />
               </div>
-              My name is Brendan Sandfer, and I design and develop software
-              solutions. I am a full-stack web developer and I aim to stay on
-              the cutting edge by continually learning new technologies and
-              growing as a developer and software engineer. I bring passion and
-              dedication to all my projects, with empathy for users, and
-              curiosity for the ever-evolving business. I am experienced working
-              in fast-paced team-oriented environments, enthusiastic to take on
-              new problems and push the next-generation of technology forward.
+              Full Stack Web Developer with over 13 years of professional experience in technology and 3+ years
+              specializing in software development. Skilled in React, Next.js, TypeScript, and modern front-end
+              frameworks with a strong focus on building accessible, high-performance user interfaces. Experienced
+              in API integration, agile collaboration, and code optimization. Passionate about continuous learning and
+              delivering scalable, user-centered software solutions.
+              Please checkout my portforlio above to see some highlighted previous public work, or follow the Github link above to my github profile to see my latest commits and what I've been working on most recently! Thanks for visiting. Please feel free to reach out via my email posted below.
+              <br />
+              Brendan
             </Typography>
           </Grid>
         </Grid>
@@ -231,6 +231,15 @@ const About = () => {
                   height="40"
                 />
               </a>{" "}
+              <a href="https://nextjs.org/" target="_blank" rel="noreferrer">
+                {" "}
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-line-wordmark.svg"
+                  alt="next js"
+                  width="40"
+                  height="40"
+                />
+              </a>{" "}
               <a href="https://www.mysql.com/" target="_blank" rel="noreferrer">
                 {" "}
                 <img
@@ -302,6 +311,15 @@ const About = () => {
                 <img
                   src="https://raw.githubusercontent.com/devicons/devicon/master/icons/swift/swift-original.svg"
                   alt="swift"
+                  width="40"
+                  height="40"
+                />
+              </a>{" "}
+              <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer">
+                {" "}
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-plain.svg"
+                  alt="typescript logo"
                   width="40"
                   height="40"
                 />

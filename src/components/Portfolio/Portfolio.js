@@ -6,6 +6,7 @@ import ThermostatIcon from '@mui/icons-material/Thermostat';
 import LocalPharmacyIcon from '@mui/icons-material/LocalPharmacy';
 import SpeakerNotesIcon from '@mui/icons-material/SpeakerNotes';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
+import FolderIcon from '@mui/icons-material/Folder'
 import Masonry from 'react-masonry-css'
 
 
@@ -20,8 +21,18 @@ const breakpointColumnsObj = {
 const Portfolio = () => {
   let projects = [
     {
+      title: "Next.js App Router Course",
+      letter: <FolderIcon />,
+      github: "https://github.com/bsandfer/nextjs-dashboard",
+      heroku: "https://nextjs-dashboard-self-ten-2wk3u8cckm.vercel.app/",
+      description: "A full-stack web application built during the Next.js App Router course.",
+      image:
+        "https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Flearn%2Fdark%2Fdashboard.png&w=3840&q=75",
+      technologies: "Styling, Optimizations, Routing, Data Fetching, Search and Pagination, Mutating Data, Error Handling, Form Validation and Accessibility, Authentication, Metadata. To try out the deployed app, use the following test credentials: user@nextmail.com, password: 123456",
+    },
+    {
       title: "Amiibo Locator",
-      letter: <ToysIcon/>,
+      letter: <ToysIcon />,
       github: "https://github.com/bsandfer/amiibo-locator",
       heroku: "https://bsandfer.github.io/amiibo-locator/",
       description: "This application is for gamers to find amiibos from a list of games.",
@@ -31,7 +42,7 @@ const Portfolio = () => {
     },
     {
       title: "Weather Dashboard",
-      letter: <ThermostatIcon/>,
+      letter: <ThermostatIcon />,
       github: "https://github.com/bsandfer/weather-dashboard",
       heroku: "https://bsandfer.github.io/weather-dashboard/",
       description: "A Weather Dashboard applicaton.",
@@ -41,7 +52,7 @@ const Portfolio = () => {
     },
     {
       title: "Hospital Management System",
-      letter: <LocalPharmacyIcon/>,
+      letter: <LocalPharmacyIcon />,
       github: "https://github.com/NGGKI/GHW--Hospital-Management-System",
       heroku: "https://hosp-man-sys.herokuapp.com/",
       description: "An application that helps manage the information related to health care and aids in the job completion of health care providers effectively. ",
@@ -51,7 +62,7 @@ const Portfolio = () => {
     },
     {
       title: "Note Taker",
-      letter: <SpeakerNotesIcon/>,
+      letter: <SpeakerNotesIcon />,
       github: "https://github.com/bsandfer/note-taker",
       heroku: "https://note-taker-bsandfer.herokuapp.com/",
       description: "An Application for writing, saving and deleting notes.",
@@ -61,7 +72,7 @@ const Portfolio = () => {
     },
     {
       title: "README Generator",
-      letter: <MenuBookIcon/>,
+      letter: <MenuBookIcon />,
       github: "https://github.com/bsandfer/readme-generator",
       heroku: "https://github.com/bsandfer/readme-generator",
       description: "This is a command line application for generating README.md files.",
@@ -71,36 +82,36 @@ const Portfolio = () => {
     },
   ];
 
-  
-  
+
+
 
   return (
     <>
       <Box margin={3} paddingBottom={6} marginLeft={6} marginRight={6}>
-          <Grid container justifyContent="center">
-            <Typography variant="h3">Portfolio</Typography>
-          </Grid>
+        <Grid container justifyContent="center">
+          <Typography variant="h3">Portfolio</Typography>
+        </Grid>
 
-          <br></br>
+        <br></br>
 
-          <Masonry 
-            breakpointCols={breakpointColumnsObj}
-            className="my-masonry-grid"
-            columnClassName="my-masonry-grid_column">
-            {projects.map((project) => (
-              <div>
-                <Card
-                  title={project.title}
-                  letter={project.letter}
-                  github={project.github}
-                  heroku={project.heroku}
-                  image={project.image}
-                  description={project.description}
-                  technologies={project.technologies}
-                ></Card>
-              </div>
-            ))}
-          </Masonry>
+        <Masonry
+          breakpointCols={breakpointColumnsObj}
+          className="my-masonry-grid"
+          columnClassName="my-masonry-grid_column">
+          {projects.map((project) => (
+            <div>
+              <Card
+                title={project.title}
+                letter={project.letter}
+                github={project.github}
+                heroku={project.heroku}
+                image={project.image}
+                description={project.description}
+                technologies={project.technologies}
+              ></Card>
+            </div>
+          ))}
+        </Masonry>
       </Box>
     </>
   );
